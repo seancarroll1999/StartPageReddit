@@ -12,7 +12,7 @@ This startpage uses three APIs. The IP API is free and doesn’t require a speci
  
  - Open Weather Map API:
    https://openweathermap.org/price
-   Subscribe to the free tier API which includes the ;5day / 3hour' forecast needed for the weather app.
+   Subscribe to the free tier API which includes the 5day / 3hour' forecast needed for the weather app.
    (used on script.js line: 95. replace 'INSERT_API_KEY_HERE' with the API Key)
    
 ## Features:
