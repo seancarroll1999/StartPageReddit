@@ -1,0 +1,236 @@
+<!--
+  Author: Sean Carroll
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Start Page 12</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/custom.css">
+  <link id="pageStyle" rel="stylesheet" href="css/dark.css">
+
+  <script src="https://kit.fontawesome.com/fb5abb866a.js"></script>
+
+</head>
+  <body>
+
+<div class="background">
+  <iframe id="map"
+    frameborder="0" style="border:0" allowfullscreen>
+  </iframe>
+</div>
+
+  <div class="side-menu">
+    <div id="oS" onclick="openSetting()" class="sideBTN"><h1 class="display-2">S</h1></div>
+    <div onclick="openUni()" class="sideBTN"><h1 class="display-2">U</h1></div>
+    <div onclick="openTodo()" class="sideBTN"><h1 class="display-2">T</h1></div>
+    <div onclick="openWeather()" class="sideBTN"><h1 class="display-2">W</h1></div>
+    <div onclick="openSetting()" class="sideBTN"><h1 class="display-2">L</h1></div>
+  </div>
+
+  <div id="time-date">
+    <h1 id="clock" class="display-1 font-weight-bold text-center">20:08</h1>
+    <h3 id="date" class="text-center" >Friday The 20st of June</h3>
+  </div>
+
+
+  <form id="searchContainer" action="https://www.google.co.uk/search" method="get" autocomplete="off">
+    <input id="sBAR" type="text" name="q">
+    <input id="sBTN" type="submit" value="" onclick="otherSearch()">
+  </form>
+
+  <button id="switchSearch" onclick="changeSearch()"><img id="search-Logo" src="img/google-Light.svg"></button>
+
+
+  <div id="box">
+
+    <div class="module" id="uni">
+      <h1 class="text-center">University</h1>
+
+      <div class="uniMod">
+        <h4 class="text-center">co3015 - Computer Science Project</h4>
+        <div class="uniLink">
+          <a href="">Module Link</a>
+          <a href="">Panopto Video</a>
+          <a href="">Blackboard</a>
+        </div>
+      </div>
+
+      <div class="uniMod">
+        <h4 class="text-center">co3091 - Comp Intelligence and Software Dev</h4>
+        <div class="uniLink">
+          <a href="">Module Link</a>
+          <a href="">Panopto Video</a>
+          <a href="">Blackboard</a>
+        </div>
+          <p class="text-center"><strong>Name:</strong>  | <strong>E-Mail:</strong> </p>
+          <p class="text-center"><strong>Name:</strong> | <strong>E-Mail:</strong> </p>
+      </div>
+
+      <div class="uniMod">
+        <h4 class="text-center">co3105 - C++</h4>
+        <div class="uniLink">
+          <a href="">Module Link</a>
+          <a href="">Panopto Video</a>
+          <a href="">Blackboard</a>
+        </div>
+          <p class="text-center"><strong>Name:</strong>   | <strong>E-Mail:</strong> </p>
+          <p class="text-center"><strong>Name:</strong> | <strong>E-Mail:</strong> </p>
+      </div>
+    </div>
+
+    <div class="module" id="settings">
+      <h1 class="text-center">Settings</h1>
+
+      <div class="setting-section">
+        <h3>UI :</h3>
+          <div class="settingItem">
+            <p>Theme: </p>
+            <input id="changeTheme" type="checkbox" data-toggle="toggle" data-size="sm" data-onstyle="light" data-offstyle="dark" data-on="Dark" data-off="Light">
+          </div>
+      </div>
+
+      <div class="setting-section">
+        <h3>Map :</h3>
+          <div class="settingItem">
+            <p>Map Scrolling: </p>
+            <input id="mapClick" type="checkbox" checked data-toggle="toggle" data-size="sm" data-onstyle="light" data-offstyle="dark" data-on="On" data-off="Off">
+          </div>
+          <div class="settingItem">
+            <p>Map IP: </p>
+            <input type="checkbox" checked data-toggle="toggle" data-size="sm" data-onstyle="light" data-offstyle="dark" data-on="Yes" data-off="No">
+          </div>
+        </div>
+    </div>
+
+    <div class="module" id="todo">
+      <h1 class="text-center">Todo</h1>
+      <div id="newTodo">
+        <input id="todo-text" type="text">
+        <button id="todo-btn" type="button" onclick="addTodo()">Add</button>
+      </div>
+      <div id="todos">
+      </div>
+    </div>
+
+    <div class="module" id="weather">
+      <h1 class="text-center">Weather</h1>
+      <div class="weatherBox" id="w1">
+        <div onclick="openMoreDetails(1)" class="weatherMain">
+          <div class="day">
+            <h3></h3>
+            <h6></h6>
+          </div>
+          <div class="temp">
+            <h3><span></span>&#8451;</h3>
+          </div>
+          <div class="wDescription">
+            <i></i>
+            <h4></h4>
+          </div>
+        </div>
+        <div id="w1Detail" class="boxDetail">
+          <!-- wDetail needs html tags generated by javascript as its dynamic -->
+          <!-- <div class="wDetail">
+            <h5></h5>
+            <h5><span></span>&#8451;</h5>
+            <h5></h5>
+          </div> -->
+        </div>
+      </div>
+
+      <div onclick="openMoreDetails(2)" class="weatherBox" id="w2">
+        <div class="weatherMain">
+          <div class="day">
+            <h3></h3>
+            <h6></h6>
+          </div>
+          <div class="temp">
+            <h3><span></span>&#8451;</h3>
+          </div>
+          <div class="wDescription">
+            <i></i>
+            <h4></h4>
+          </div>
+        </div>
+        <div id="w2Detail" class="boxDetail">
+        </div>
+      </div>
+
+      <div onclick="openMoreDetails(3)" class="weatherBox" id="w3">
+        <div class="weatherMain">
+          <div class="day">
+            <h3></h3>
+            <h6></h6>
+          </div>
+          <div class="temp">
+            <h3><span></span>&#8451;</h3>
+          </div>
+          <div class="wDescription">
+            <i></i>
+            <h4></h4>
+          </div>
+        </div>
+        <div id="w3Detail" class="boxDetail">
+        </div>
+      </div>
+
+      <div onclick="openMoreDetails(4)" class="weatherBox" id="w4">
+        <div class="weatherMain">
+          <div class="day">
+            <h3></h3>
+            <h6></h6>
+          </div>
+          <div class="temp">
+            <h3><span></span>&#8451;</h3>
+          </div>
+          <div class="wDescription">
+            <i></i>
+            <h4></h4>
+          </div>
+        </div>
+        <div id="w4Detail" class="boxDetail">
+        </div>
+      </div>
+
+      <div onclick="openMoreDetails(5)" class="weatherBox" id="w5">
+        <div class="weatherMain">
+          <div class="day">
+            <h3></h3>
+            <h6></h6>
+          </div>
+          <div class="temp">
+            <h3><span></span>&#8451;</h3>
+          </div>
+          <div class="wDescription">
+            <i></i>
+            <h4></h4>
+          </div>
+        </div>
+        <div id="w5Detail" class="boxDetail">
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  </div>
+  </body>
+
+
+</html>

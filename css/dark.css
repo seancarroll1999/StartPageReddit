@@ -1,0 +1,102 @@
+/*
+  Author: Sean Carroll
+*/
+
+body{
+  background-color: #333;
+  color: #ddd;
+}
+
+/* BACKGROUND */
+#map{
+  filter: invert(100%) grayscale(100%) opacity(0.3);
+}
+.background{
+  background-color: #222;
+}
+
+
+/* SIDE MENU */
+.side-menu{
+  background-color: #222;
+  border-right: 2px solid white;
+}
+.side-menu:hover{
+  opacity: 0.7;
+}
+.sideBTN{
+  border-right: 2px solid white;
+  background-color: #111;
+}
+.sideBTN:hover{
+  background-color: #000;
+  color: 	#0461bf;
+}
+
+/* SEARCH BAR */
+#searchContainer:hover{
+  background-color: #444;
+}
+
+#searchContainer:hover + #sBTN{
+  background-color: #111;
+}
+
+#sBAR{
+  color: #ddd;
+  border-bottom: 2px solid white;
+}
+
+#sBAR:hover + #sBTN{
+  background-color: #111;
+}
+
+#sBAR:focus + #sBTN{
+  background-color: #111;
+}
+#sBAR:focus{
+  background-color: #444;
+}
+#sBTN{
+    border-bottom: 2px solid white;
+}
+
+
+
+
+/* BOX */
+#box{
+  background-color: #111;
+  border: 2px solid white;
+  filter: opacity(0.7);
+}
+
+.module h1{
+  background-color: #222;
+  border-bottom: 2px solid white;
+}
+
+/* UNIVERSITY */
+.uniMod{
+  border-bottom: 2px solid white;
+  background-color: #222;
+}
+.uniMod h4{
+  background-color: #222;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+.uniLink a:hover{
+  background-color: #111;
+}
+
+/* SETTINGS */
+.setting-section{
+  background-color: #222;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.setting-section h3{
+  border-bottom: 2px solid white;
+}
